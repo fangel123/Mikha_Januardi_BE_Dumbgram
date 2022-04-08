@@ -30,52 +30,52 @@ exports.getProduct = async (req, res) => {
     //   },
     // });
 
-    // sort fitur
-    let data = "";
-        let sortNameAsc = false;
-        let sortNameDsc = false; // name z to a
-        let sortPriceAsc = false;
-        let sortPriceDsc = true; // high price to lower price
+    // // sort fitur
+    // let data = "";
+    //     let sortNameAsc = false;
+    //     let sortNameDsc = false; // name z to a
+    //     let sortPriceAsc = false;
+    //     let sortPriceDsc = true; // high price to lower price
 
-        if(sortNameAsc == true){
-             data = await product.findAll({
-                order: [['name', 'ASC']],
-                attributes: {
-                  exclude: ['createdAt', 'updatedAt'],
-                }
-              });
-        };
-        if(sortNameDsc == true){
-            data = await product.findAll({
-               order: [['name', 'DESC']],
-               attributes: {
-                 exclude: ['createdAt', 'updatedAt'],
-               }
-             });
-       };
-        if(sortPriceAsc == true){
-             data = await product.findAll({
-                order: [['price', 'ASC']],
-                attributes: {
-                  exclude: ['createdAt', 'updatedAt'],
-                }
-              });
-        };
-        if(sortPriceDsc == true){
-            data = await product.findAll({
-               order: [['price', 'DESC']],
-               attributes: {
-                 exclude: ['createdAt', 'updatedAt'],
-               }
-             });
-       };
-        if(sortPriceAsc == false && sortPriceDsc == false && sortNameAsc == false && sortNameDsc == false){
-             data = await product.findAll({
-                attributes: {
-                  exclude: ['createdAt', 'updatedAt'],
-                }
-              });
-        };
+    //     if(sortNameAsc == true){
+    //          data = await product.findAll({
+    //             order: [['name', 'ASC']],
+    //             attributes: {
+    //               exclude: ['createdAt', 'updatedAt'],
+    //             }
+    //           });
+    //     };
+    //     if(sortNameDsc == true){
+    //         data = await product.findAll({
+    //            order: [['name', 'DESC']],
+    //            attributes: {
+    //              exclude: ['createdAt', 'updatedAt'],
+    //            }
+    //          });
+    //    };
+    //     if(sortPriceAsc == true){
+    //          data = await product.findAll({
+    //             order: [['price', 'ASC']],
+    //             attributes: {
+    //               exclude: ['createdAt', 'updatedAt'],
+    //             }
+    //           });
+    //     };
+    //     if(sortPriceDsc == true){
+    //         data = await product.findAll({
+    //            order: [['price', 'DESC']],
+    //            attributes: {
+    //              exclude: ['createdAt', 'updatedAt'],
+    //            }
+    //          });
+    //    };
+    //     if(sortPriceAsc == false && sortPriceDsc == false && sortNameAsc == false && sortNameDsc == false){
+    //          data = await product.findAll({
+    //             attributes: {
+    //               exclude: ['createdAt', 'updatedAt'],
+    //             }
+    //           });
+    //     };
 
     // Path File image
     data = data.map((item) => {
