@@ -3,33 +3,6 @@ const { product, user, category, productCategory } = require('../../models');
 // Get all product
 exports.getProduct = async (req, res) => {
   try {
-    // let data = await product.findAll({
-    //   include: [
-    //     {
-    //       model: user,
-    //       as: 'user',
-    //       attributes: {
-    //         exclude: ['createdAt', 'updatedAt', 'password'],
-    //       },
-    //     },
-        // {
-        //   model: category,
-        //   as: 'categories',
-        //   through: {
-        //     model: productCategory,
-        //     as: 'bridge',
-        //     attributes: [],
-        //   },
-        //   attributes: {
-        //     exclude: ['createdAt', 'updatedAt'],
-        //   },
-        // },
-    //   ],
-    //   attributes: {
-    //     exclude: ['createdAt', 'updatedAt', 'idUser'],
-    //   },
-    // });
-
     // sort fitur
     let data = "";
         let sortNameAsc = false;

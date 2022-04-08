@@ -105,23 +105,3 @@ exports.addTransaction = async (req, res) => {
         })
     }
 }
-
-    // Add Transaction option 2
-//     try {
-//         const data = req.body
-
-//         await transaction.create(data)
-
-//         res.send({
-//             status: 'success',
-//             message: 'Add transaction finished'
-//         })
-
-//     } catch (error) {
-//         console.log(error)
-//         res.send({
-//             status: 'failed',
-//             message: 'Server Error'
-//         })
-//     }
-// }
